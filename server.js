@@ -38,6 +38,9 @@ const FormSchema = new mongoose.Schema({
   
 const Form = mongoose.model("Form", FormSchema);
 
+app.get('/',(req,res)=>{
+    res.status(200).json({messag:'hello server1.js'})
+})
 // API Endpoint to save form data
 app.post("/api/forms", async (req, res) => {
   const formData = req.body;
